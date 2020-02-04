@@ -1,0 +1,25 @@
+
+<%- include('header.ejs') %>
+<h2>Enter a New guest detail</h2>
+
+<form method="post" role="post" action="/new-entry">
+
+    <div>
+        <label for="name"></label>
+        <input type="text" id="" name="name" placeholder="Enter Guest Name">
+
+    </div>
+    <div>
+        <label for="msg"></label>
+        <input type="textarea" id="msg" name="msg" placeholder="Leave some message">
+        
+    </div>
+    <div>
+        
+        <input type="submit" value="Post Entry">
+        
+    </div>
+</form>
+
+
+<%- include('footer.ejs') %>

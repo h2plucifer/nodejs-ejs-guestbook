@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GuestBook</title>
+</head>
+<body>
+    <header>
+        <%- include('header.ejs') %>
+    </header>
+    <div class="conatiner">
+        <h4>Guest Entreis</h4>
+
+     <% if(entries.length){ %>
+        <% entries.forEach((entry)=>{ %>
+      <div>
+          <p>entry.published</p>
+          <p>entry.name</p>
+          <p>entry.msg</p>
+    </div>
+      
+     <%}) } else { %>
+        <div>No entry till now ...<br />
+        <a href="/new-entry" >Add new Entry</a></div>
+     <% } %>
+
+
+    </div>
+    <footer>
+        <%- include('footer.ejs') %>
+    </footer>
+</body>
+</html>
